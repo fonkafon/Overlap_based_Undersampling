@@ -1,6 +1,5 @@
 #calculate AUC
-library(ROCR)
-calAuc <- function(results, test){
+calAuc <- function(results, test,i){
   results<-as.numeric(results)                #factor -> numeric
   test$label <- as.numeric(test$label)
   pred <- prediction(results, test$label)
